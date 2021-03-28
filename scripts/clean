@@ -1,0 +1,38 @@
+#!/bin/bash
+# sandboxp/scripts/clean
+#
+# cleans out previous build and install files
+# does not clean out any log files in sandboxp/logs
+#
+# cleans out any CMake files mistakenly created by
+# running cmake in the wrong directory
+#
+SCRIPTS_DIR=$(dirname "$0")
+cd $SCRIPTS_DIR
+cd ../
+SANDBOXP_DIR=$(pwd)
+cd $SANDBOXP_DIR
+
+if [[ -d build ]]
+then
+  rm -rf build/*
+fi
+
+if [[ -d install ]]
+then
+  rm -rf install/*
+fi
+
+if [[ -d CMakeFiles ]]
+then
+  rm -rf CMakeFiles
+fi
+
+if [[ -e CMakeCache.txt ]]
+then
+  rm  CMakeCache.txt
+fi
+clear
+echo "Directory $(pwd):"
+echo
+dir

@@ -1,0 +1,2 @@
+#define Sandboxp_VERSION_MAJOR @sandboxp_VERSION_MAJOR@
+#define Sandboxp_VERSION_MINOR @sandboxp_VERSION_MINOR@

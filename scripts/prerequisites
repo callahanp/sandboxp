@@ -1,0 +1,39 @@
+#!/bin/bash
+# sandboxp/scripts/prerequisites
+# 
+# installs pre-requisite Ubuntu packages
+#
+function _printLog(){
+  # Possible special case for the terminal: echo "${PROGNAME}: $@"
+  # That would be more precise but rather verbose, and not all output uses
+  # _printLog() for now, so it would look too inconsistent.
+  echo "$@" | tee -a "$LOGFILE"
+}
+
+function _doLog(){
+  # Possible special case for the terminal: echo "${PROGNAME}: $@"
+  # That would be more precise but rather verbose, and not all output uses
+  # _printLog() for now, so it would look too inconsistent.
+  echo "$@" | tee -a "$LOGFILE"
+  $@  2>&1 | tee -a "$LOGFILE"
+}
+# Echo the contents of stdin to the terminal and/or to $LOGFILE.
+
+SCRIPT_NAME=$(basename "$0")
+SCRIPTS_DIR=$(pwd)
+cd $(dirname "$0")
+SCRIPTS_DIR=$(pwd)
+cd ../
+SANDBOXP_DIR=$(pwd)
+LOGFILE=$SANDBOXP_DIR/logs/prerequisites.log
+_printLog "Starting $SCRIPTS_DIR/$SCRIPT_NAME AT $(date)" 
+_printLog ""
+
+_printLog cd $SANDBOXP_DIR/build
+cd $SANDBOXP_DIR/build
+sudo apt-get install build-essential
+sudo apt-get install cmake
+sudo apt-get install ninja-build
+_printLog
+_printLog "Finished $SCRIPTS_DIR/$SCRIPT_NAME AT $(date)" 
+_printLog 
