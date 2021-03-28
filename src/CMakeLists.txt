@@ -8,6 +8,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 project(sandboxp VERSION 0.0)
 foreach( srcFolder
+         Component
          Main
         )
   include_directories (${srcFolder})

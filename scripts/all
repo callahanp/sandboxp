@@ -1,0 +1,7 @@
+SCRIPT_NAME=$(basename "$0")
+SCRIPTS_DIR=$(pwd)
+cd $(dirname "$0")
+SCRIPTS_DIR=$(pwd)
+./clean
+./build
+./run
