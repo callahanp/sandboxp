@@ -1,0 +1,12 @@
+SCRIPT_NAME=$(basename "$0")
+SCRIPTS_DIR=$(pwd)
+cd $(dirname "$0")
+SCRIPTS_DIR=$(pwd)
+cd ../
+SANDBOXP_SRC_DIR=$(pwd)/src
+cd $SANDBOXP_SRC_DIR
+
+mkdir -p $1
+touch $1/CMakeLists.txt
+touch $1/$1.cxx
+touch $1/$1.hxx
