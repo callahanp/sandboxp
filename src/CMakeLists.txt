@@ -13,7 +13,7 @@ message("CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 project(sandboxp VERSION 0.0)
-find_package(log4cxx REQUIRED)
+find_package(Log4cxx REQUIRED)
 foreach( srcFolder
          Data
          Message

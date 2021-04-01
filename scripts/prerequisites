@@ -36,6 +36,16 @@ sudo apt-get install -y build-essential
 sudo apt-get install -y cmake
 sudo apt-get install -y ninja-build
 sudo apt-get install -y liblog4cxx-dev
+mkdir -p CMakeModules
+cd CMakeModules
+if [[ ! -e FindLog4cxx.cmake ]]
+then 
+  wget https://raw.githubusercontent.com/Kitware/vibrant/master/CMake/FindLog4cxx.cmake
+else 
+  echo "CMakeModules/FindLog4cxx.cmake previously downloaded with wget from:"
+  echo "https://raw.githubusercontent.com/Kitware/vibrant/master/CMake/FindLog4cxx.cmake"
+fi
+cd -
 _printLog
 _printLog "Finished $SCRIPTS_DIR/$SCRIPT_NAME AT $(date)"
 _printLog
