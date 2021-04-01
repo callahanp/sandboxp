@@ -31,6 +31,7 @@ cd ../
 SANDBOXP_DIR=$(pwd)
 INSTALL_DIR_SANDBOXP=$SANDBOXP_DIR/install
 LOGFILE=$SANDBOXP_DIR/logs/build.log
+
 rm -f $LOGFILE
 _printLog "Starting $SCRIPTS_DIR/$SCRIPT_NAME AT $(date)"
 _printLog ""

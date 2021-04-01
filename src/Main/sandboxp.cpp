@@ -3,8 +3,29 @@
 #include <Component.hxx>
 #include <Message.hxx>
 #include <Data.hxx>
+#include <log4cxx/log4cxx.h>
+#include "log4cxx/propertyconfigurator.h"
+#include "log4cxx/helpers/exception.h"
+using namespace log4cxx;
+using namespace log4cxx::helpers;
+
 int main(int argc, char* argv[]) {
+  int result = EXIT_SUCCESS;
+  LoggerPtr logger(Logger::getLogger("sandboxp"));
+  std::string loggingPropertyFileName="../config/log4cxx.config";
+try
+{
+  // Set up a simple configuration that logs on the console.
+  log4cxx::PropertyConfigurator::configure(loggingPropertyFileName);
+
+  LOG4CXX_INFO(logger, "Entering application.");
+
   // report version
+  const char* region = "World";
+  LOG4CXX_INFO(logger, "Simple message text.")
+  LOG4CXX_INFO(logger, "Hello, " << region)
+  //LOG4CXX_DEBUG(logger, L"Iteration " << i)
+  //LOG4CXX_DEBUG(logger, "e^10 = " << std::scientific << exp(10.0))
   std::cout << argv[0] << " Version " << Sandboxp_VERSION_MAJOR << "."
             << Sandboxp_VERSION_MINOR << std::endl;
 
@@ -41,5 +62,12 @@ int main(int argc, char* argv[]) {
   BoomAngle=255;
 
   Data("BoomAngle", BoomAngle);
-  return 0;
+  LOG4CXX_INFO(logger, "Exiting application.")
+}
+catch(Exception&)
+{
+  result = EXIT_FAILURE;
+}
+
+return result;
 }

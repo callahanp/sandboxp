@@ -1,6 +1,6 @@
 #!/bin/bash
 # sandboxp/scripts/prerequisites
-# 
+#
 # installs pre-requisite Ubuntu packages
 #
 function _printLog(){
@@ -26,14 +26,16 @@ SCRIPTS_DIR=$(pwd)
 cd ../
 SANDBOXP_DIR=$(pwd)
 LOGFILE=$SANDBOXP_DIR/logs/prerequisites.log
-_printLog "Starting $SCRIPTS_DIR/$SCRIPT_NAME AT $(date)" 
+_printLog "Starting $SCRIPTS_DIR/$SCRIPT_NAME AT $(date)"
 _printLog ""
 
 _printLog cd $SANDBOXP_DIR/build
 cd $SANDBOXP_DIR/build
-sudo apt-get install build-essential
-sudo apt-get install cmake
-sudo apt-get install ninja-build
+sudo apt-get update -y
+sudo apt-get install -y build-essential
+sudo apt-get install -y cmake
+sudo apt-get install -y ninja-build
+sudo apt-get install -y liblog4cxx-dev
 _printLog
-_printLog "Finished $SCRIPTS_DIR/$SCRIPT_NAME AT $(date)" 
-_printLog 
+_printLog "Finished $SCRIPTS_DIR/$SCRIPT_NAME AT $(date)"
+_printLog

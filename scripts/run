@@ -8,4 +8,5 @@ cd ../
 SANDBOXP_DIR=$(pwd)
 INSTALL_DIR_SANDBOXP=$SANDBOXP_DIR/install
 cd ${INSTALL_DIR_SANDBOXP}/bin
+echo "pwd: $(pwd)"
 ./sandboxp

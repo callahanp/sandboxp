@@ -11,4 +11,6 @@ foreach( projectFolder
         add_subdirectory(${projectFolder})
 
 endforeach( projectFolder )
+install(FILES ${PROJECT_SOURCE_DIR}/config/log4cxx.config DESTINATION config)
+
 
