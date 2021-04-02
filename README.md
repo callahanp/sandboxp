@@ -1,9 +1,29 @@
 # sandboxp
 A sandbox for Multi-Threaded, Multi-Process, Multiple Processor, Cluster and Networked Cluster Parallell Processing
 
+#### Todo:  
+
+- Add Apache log4cxx to the project
+- Add object dump method to every class
+- Add logging for object instantiation
+
+#### DesignStatus:
+
+- Application is still single threaded and does not communicate between processes
+- All classes create simple objects with members for names and native type data items.
+- No object composition yet.
+
+#### Questions: 
+
+- Can logging be done in a separate thread without blocking?
+
+#### Overview
+
 Sandboxp is intended to be an exploratory work area for various scenarios that may benefit from the application of paralellism in multiple processes.  The primary motivation is to explore design principles in such a way that they can be applied to various parts of a flight simulation program.
 
 The core idea is a Component class that manages an update process whose inputs include data sourced from other instances of the Component class.  Each instance may be run in different execution contexts such as a different, thread, process on the same or another cpu, even a separate network node.   The class is designed so that the process is guaranteed to run within a given time slice window using a full set of updated data that is guaranteed to be consistent, regardless of it's source and the asynchronous nature of communication mechanisms.
+
+#### Speculative Design Ideas
 
 So what does it mean for a Component to manage it's process and data.  
 
