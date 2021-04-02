@@ -7,6 +7,7 @@
 message("")
 message("Building sandboxp")
 message("")
+message(CMAKE_SOURCE_DIR: ${CMAKE_SOURCE_DIR})
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/CMakeModules;${CMAKE_MODULE_PATH}")
 message("CMAKE_MODULE_PATH: ${CMAKE_MODULE_PATH}")
 message("CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")

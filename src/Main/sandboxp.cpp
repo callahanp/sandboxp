@@ -8,10 +8,10 @@
 #include "log4cxx/helpers/exception.h"
 using namespace log4cxx;
 using namespace log4cxx::helpers;
+LoggerPtr logger(Logger::getLogger("sandboxp"));
 
 int main(int argc, char* argv[]) {
   int result = EXIT_SUCCESS;
-  LoggerPtr logger(Logger::getLogger("sandboxp"));
   std::string loggingPropertyFileName="../config/log4cxx.config";
 try
 {
@@ -26,8 +26,8 @@ try
   LOG4CXX_INFO(logger, "Hello, " << region)
   //LOG4CXX_DEBUG(logger, L"Iteration " << i)
   //LOG4CXX_DEBUG(logger, "e^10 = " << std::scientific << exp(10.0))
-  std::cout << argv[0] << " Version " << Sandboxp_VERSION_MAJOR << "."
-            << Sandboxp_VERSION_MINOR << std::endl;
+  LOG4CXX_INFO(logger,   argv[0] << " Version " << Sandboxp_VERSION_MAJOR << "."
+            << Sandboxp_VERSION_MINOR);
 
   int MainSheetCleatedAtInches=42;
   int BoomAngle=105;

@@ -1,6 +1,12 @@
 #pragma once
 #include <iostream>
 #include <string>
+
+#include <log4cxx/log4cxx.h>
+#include <log4cxx/propertyconfigurator.h>
+using namespace log4cxx;
+extern LoggerPtr logger;
+
 class Data {
 public:
   static int nextDataId;

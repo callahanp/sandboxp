@@ -1,15 +1,15 @@
 #include <iostream>
 #include <string>
+
+#include <log4cxx/propertyconfigurator.h>
+using namespace log4cxx;
+extern LoggerPtr logger;
+
 class Component {
 public:
 
-  Component (const char* componentName) {
-    Component::componentName = componentName;
-    std::cout << "Created Component: " << Component::componentName <<std::endl;
-  }
-  std::string get_component_name(){
-    return componentName;
-  }
+  Component (const char* componentName);
+  std::string   get_component_name();
 private:
   std::string componentName;
 };
