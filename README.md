@@ -83,3 +83,35 @@ Note that this is a very preliminary take on an infrastructure and is likely to 
   - Response
   - Event - Arrival of a message maybe?
  
+OpenMP training
+
+https://www.youtube.com/watch?v=nE-xN4Bf8XI&list=PLLX-Q6B8xqZ8n8bwjGdzBJ25X2utwnoEG&index=1
+[Introduction to OpenMP: 01 Introduction](https://www.youtube.com/watch?v=nE-xN4Bf8XI)
+[Introduction to OpenMP: 02 part 1 Module 1](https://www.youtube.com/watch?v=cMWGeJyrc9w)
+[Introduction to OpenMP: 02 part 2 Module 1](https://www.youtube.com/watch?v=6jFkNjhJ-Z4)
+
+Key Concepts:
+- Concurrency 
+- Paralellism
+- omp.h
+- pragma omp parallel {}
+
+
+[Exercises can be found in OMP Hands On](https://github.com/tgmattso/OpenMP_intro_tutorial/blob/master/omp_hands_on.pdf)
+
+Linux info extracted from OMP Hands On:
+
+Excercise from Unit 1.  
+    Build foo.c according to omp_hands_on.pdf Slides 26-28
+    
+    apt-get install libomp-dev
+    gcc -fopenmp foo.c
+    export OMP_NUM_THREADS=4
+    ./a.out
+[Introduction to OpenMP: 03 Module 2](https://www.youtube.com/watch?v=jfQLD2AGSvc)
+
+
+[Khronos sycl}(https://www.khronos.org/blog/sycl-2020-what-do-you-need-to-know)
+
+"In addition, SYCL also provides developers with a task-based programming model for expressing concurrency between kernels. By default, all kernels are submitted to an out-of-order queue with the ordering of tasks determined by data dependencies expressed using assessors. For SYCL applications using Unified Shared Memory (instead of the Buffer/Accessor model), the task-model is still available with the dependencies between kernels expressed using Events."
+
