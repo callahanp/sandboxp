@@ -89,13 +89,24 @@ https://www.youtube.com/watch?v=nE-xN4Bf8XI&list=PLLX-Q6B8xqZ8n8bwjGdzBJ25X2utwn
 [Introduction to OpenMP: 01 Introduction](https://www.youtube.com/watch?v=nE-xN4Bf8XI)
 [Introduction to OpenMP: 02 part 1 Module 1](https://www.youtube.com/watch?v=cMWGeJyrc9w)
 [Introduction to OpenMP: 02 part 2 Module 1](https://www.youtube.com/watch?v=6jFkNjhJ-Z4)
-
 Key Concepts:
 - Concurrency 
 - Paralellism
-- omp.h
-- pragma omp parallel {}
+[Introduction to OpenMP: 04 Discussion 1](https://www.youtube.com/watch?v=x0HkbIuJILk)
 
+    #include <omp.h>
+    omp_set_num_threads(int);
+    #pragma omp parallel 
+        {}
+        omp_get_thread_num();
+        
+On windows, 
+- use Visual studio Create c++ project
+- Create a console Application
+- Project -> Properties -> Language: Set Open MP Support to Yes(/openmp) 
+- Project -> Properties -> Command Line Additional options, type /Zc:twoPhase-
+- Make .cpp per instuctions
+- How to set 
 
 [Exercises can be found in OMP Hands On](https://github.com/tgmattso/OpenMP_intro_tutorial/blob/master/omp_hands_on.pdf)
 
