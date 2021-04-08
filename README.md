@@ -7,6 +7,7 @@ A sandbox for Multi-Threaded, Multi-Process, Multiple Processor, Cluster and Net
 - Consider reading https://www.amazon.com/OpenMP-Common-Core-Engineering-Computation/dp/0262538865
 - Find and code exercises from Tim's videos
 - Find slides from Tim's videos
+  - https://www.openmp.org/wp-content/uploads/Intro_To_OpenMP_Mattson.pdf
 - Add object dump method to every class
 - Add logging for object instantiation
 
