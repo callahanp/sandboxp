@@ -3,7 +3,10 @@ A sandbox for Multi-Threaded, Multi-Process, Multiple Processor, Cluster and Net
 
 #### Todo:  
 
-- Add Apache log4cxx to the project
+- Review videos on OpenMP by Tim Mattson. https://www.youtube.com/watch?v=nE-xN4Bf8XI&list=PLLX-Q6B8xqZ8n8bwjGdzBJ25X2utwnoEG&index=2
+- Consider reading https://www.amazon.com/OpenMP-Common-Core-Engineering-Computation/dp/0262538865
+- Find and code exercises from Tim's videos
+- Find slides from Tim's videos
 - Add object dump method to every class
 - Add logging for object instantiation
 
@@ -12,6 +15,7 @@ A sandbox for Multi-Threaded, Multi-Process, Multiple Processor, Cluster and Net
 - Application is still single threaded and does not communicate between processes
 - All classes create simple objects with members for names and native type data items.
 - No object composition yet.
+- Added Apache log4cxx to the project
 
 #### Questions: 
 
