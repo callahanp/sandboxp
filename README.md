@@ -85,21 +85,29 @@ Note that this is a very preliminary take on an infrastructure and is likely to 
  
 OpenMP training
 
-https://www.youtube.com/watch?v=nE-xN4Bf8XI&list=PLLX-Q6B8xqZ8n8bwjGdzBJ25X2utwnoEG&index=1
-[Introduction to OpenMP: 01 Introduction](https://www.youtube.com/watch?v=nE-xN4Bf8XI)
-[Introduction to OpenMP: 02 part 1 Module 1](https://www.youtube.com/watch?v=cMWGeJyrc9w)
-[Introduction to OpenMP: 02 part 2 Module 1](https://www.youtube.com/watch?v=6jFkNjhJ-Z4)
+(https://www.youtube.com/watch?v=nE-xN4Bf8XI&list=PLLX-Q6B8x8n8bwjGdzBJ25X2utwnoEG&index=1)
+Introduction to Open MP with Tim Mattson:
+- [01 Introduction](https://www.youtube.com/watch?v=nE-xN4Bf8XI)
+- [02 part 1 Module 1](https://www.youtube.com/watch?v=cMWGeJyrc9w)
+- [02 part 2 Module 1](https://www.youtube.com/watch?v=6jFkNjhJ-Z4)
+- [03 Module 2](https://www.youtube.com/watch?v=jfQLD2AGSvc)
+
 Key Concepts:
 - Concurrency 
 - Paralellism
-[Introduction to OpenMP: 04 Discussion 1](https://www.youtube.com/watch?v=x0HkbIuJILk)
+
+- [Introduction to OpenMP: 04 Discussion 1](https://www.youtube.com/watch?v=x0HkbIuJILk)
 
     #include <omp.h>
     omp_set_num_threads(int);
     #pragma omp parallel 
         {}
         omp_get_thread_num();
-        
+
+
+Fork-Join Paralleism
+Team of Threads
+
 On windows, 
 - use Visual studio Create c++ project
 - Create a console Application
@@ -119,9 +127,28 @@ Excercise from Unit 1.
     gcc -fopenmp foo.c
     export OMP_NUM_THREADS=4
     ./a.out
-[Introduction to OpenMP: 03 Module 2](https://www.youtube.com/watch?v=jfQLD2AGSvc)
 
 
+-[05 Module     3](https://www.youtube.com/watch?v=FQ1k_YpyG_A)
+-[06 Discussion 2](https://www.youtube.com/watch?v=OuzYICZUthM)
+-[07 Module     4](https://www.youtube.com/watch?v=WcPZLJKtywc)
+-[08 Discussion 3](https://www.youtube.com/watch?v=pLa972Rgl1I)
+-[09 Module     5 Part 1](https://www.youtube.com/watch?v=jdYHVeh2wEI)
+-[09 Module     5 Part 2](https://www.youtube.com/watch?v=iPb6OLhDEmM)
+-[10 Discussion 4](https://www.youtube.com/watch?v=8jzHiYo49G0)
+-[11 Module     6 Part 1](https://www.youtube.com/watch?v=iQSls3ITcp0)
+-[11 Module     6 Part 2](https://www.youtube.com/watch?v=Te7msPhJbdU)
+-[12 Module     7](https://www.youtube.com/watch?v=dlrbD0mMMcQ)
+-[13 Discussion 5](https://www.youtube.com/watch?v=EaX8efKce9M)
+-[14 Module     8](https://www.youtube.com/watch?v=I0c9-W0MBqw)
+-[15 Discussion 6](https://www.youtube.com/watch?v=BJIEGTcrz30)
+-[16 Module     9](https://www.youtube.com/watch?v=AioeS_Jo0Yg)
+-[17 Discussion 7](https://www.youtube.com/watch?v=mNPmylnhYYQ)
+-[18 Module    10](https://www.youtube.com/watch?v=Q96sRpbKzEs)
+-[19 Discussion 8 - The pitfalls of pairwise synchronization](https://www.youtube.com/watch?v=0uUq5ocKRY0)
+-[20 Module 11](https://www.youtube.com/watch?v=0hjYIahNqBs)
+-[21 Discussion 9](https://www.youtube.com/watch?v=tQgNDhR3UaE)
+-[22 Recapitulation](https://www.youtube.com/watch?v=sNmGXNBzofM)
 [Khronos sycl}(https://www.khronos.org/blog/sycl-2020-what-do-you-need-to-know)
 
 "In addition, SYCL also provides developers with a task-based programming model for expressing concurrency between kernels. By default, all kernels are submitted to an out-of-order queue with the ordering of tasks determined by data dependencies expressed using assessors. For SYCL applications using Unified Shared Memory (instead of the Buffer/Accessor model), the task-model is still available with the dependencies between kernels expressed using Events."
