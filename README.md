@@ -130,6 +130,12 @@ Excercise from Unit 1.
 
 
 - [05 Module     3](https://www.youtube.com/watch?v=FQ1k_YpyG_A)
+
+- Fork Join Parallelism
+- Team of Threads
+
+- Fork -> #pragma omp parallel {}->Team of Threads -> Join
+- 
 - [06 Discussion 2](https://www.youtube.com/watch?v=OuzYICZUthM)
 - [07 Module     4](https://www.youtube.com/watch?v=WcPZLJKtywc)
 - [08 Discussion 3](https://www.youtube.com/watch?v=pLa972Rgl1I)
