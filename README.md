@@ -1,6 +1,7 @@
 # sandboxp
 A sandbox for Multi-Threaded, Multi-Process, Multiple Processor, Cluster and Networked Cluster Parallell Processing
 
+# Warning: As of 13-April-2021, this project meets all the criteria for vaporware
 #### Todo:  
 
 - Review videos on OpenMP by Tim Mattson. https://www.youtube.com/watch?v=nE-xN4Bf8XI&list=PLLX-Q6B8xqZ8n8bwjGdzBJ25X2utwnoEG&index=2
